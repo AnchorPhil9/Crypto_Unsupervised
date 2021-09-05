@@ -1,2 +1,5 @@
-# Crypto_Unsupervised
-We have been tasked to create a report on cryptocurrencies being traded. For this project, we have obtained cryptocurrency data from CryptoCompare. Once we process all the data for currently traded cryptocurrencies, we will use unsupervised machine learning to group that data together and gain a better view of it.
+# Unsupervised Machine Learning with Cryptocurrency Data
+We have been tasked to create a report on cryptocurrencies being traded. For this project, we have obtained cryptocurrency data from CryptoCompare. Once we process all the data for currently traded cryptocurrencies, we will use unsupervised machine learning to group that data together and gain a better view of the cryptocurrency market.
+
+## Data Processing
+A quick glance of the starting data shows us three important parameters: trading status, crypto supply, and crypto mining. To prepare the data for unsupervised machine learning, we used astype(int) and other DataFrame functions to isolate data for currently traded data. Given the variety of cryptocurrency prooftypes and algorithms to account for in our analysis, we used get_dummies on the **"Prooftype"** and **"Algorithm"** columns for standard scaling. In turn, we use Principal Compenent Analysis (PCA) to reduce the dimensions of the scaled data to just 3 dimensions, which will make things easier for our machine learning work.
